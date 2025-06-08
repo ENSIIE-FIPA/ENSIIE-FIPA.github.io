@@ -1,0 +1,14 @@
+title: "Cours Ingénieur"
+baseurl: ""
+url: "https://votrepseudo.github.io"
+theme: minima
+
+collections:
+  semestres:
+    output: true
+
+plugins:
+  - jekyll-feed
+
+# Spécifique à Debian pour encodage
+encoding: "utf-8"
