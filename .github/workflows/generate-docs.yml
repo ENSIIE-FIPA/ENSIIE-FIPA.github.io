@@ -1,0 +1,62 @@
+name: Generate Doc Indexes
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0
+        
+    - name: Generate indexes
+      run: |
+        ruby -e "
+        require 'fileutils'
+        
+        def generate_index(dir)
+          pdfs = Dir.glob('#{dir}/*.pdf')
+          return if pdfs.empty?
+          
+          title = File.basename(dir).gsub(/[_-]/, ' ').split.map(&:capitalize).join(' ')
+          
+          content = <<~MD
+            ---
+            layout: doc
+            title: '#{title}'
+            ---
+            
+            # #{title}
+            
+            ## Documents disponibles :
+            
+          MD
+          
+          pdfs.each do |pdf|
+            name = File.basename(pdf, '.pdf').gsub(/[_-]/, ' ')
+            content += \"- [#{name}](#{File.basename(pdf)})\n\"
+          end
+          
+          File.write('#{dir}/index.md', content)
+          puts \"Generated: #{dir}/index.md\"
+        end
+        
+        Dir.glob('**/').each { |d| generate_index(d.chomp('/')) unless d.match?(/^[._]/) }
+        "
+        
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff --staged --quiet || git commit -m "Auto-generate doc indexes"
+        git push
