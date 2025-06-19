@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modélisation objet | UE Info | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .ressource-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .ressource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .ressource-card h2 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../">Accueil</a> &gt; 
+            <a href="../../">Semestre 1</a> &gt; 
+            <a href="../">UE Info</a> &gt; 
+            Modélisation objet
+        </nav>
+        
+        <header>
+            <h1>Modélisation objet</h1>
+            <p>Concepts avancés de programmation orientée objet</p>
+        </header>
+        
+        <main>
+            <a href="CM/" class="ressource-card">
+                <div class="card-icon">📚</div>
+                <h2>Cours Magistraux</h2>
+                <p>Accéder aux supports de cours complets</p>
+            </a>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>

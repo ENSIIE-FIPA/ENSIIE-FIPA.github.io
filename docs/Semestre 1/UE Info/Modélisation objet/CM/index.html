@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM Modélisation objet | UE Info | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .document-item {
+            margin-bottom: 1rem;
+        }
+        
+        .document-link {
+            display: block;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: var(--dark);
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .document-link:hover {
+            transform: translateX(5px);
+            background: #f1f8ff;
+        }
+        
+        .document-link strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../../">Accueil</a> &gt; 
+            <a href="../../../">Semestre 1</a> &gt; 
+            <a href="../../">UE Info</a> &gt; 
+            <a href="../">Modélisation objet</a> &gt; 
+            Cours Magistraux
+        </nav>
+        
+        <header>
+            <h1>Cours Magistraux - Modélisation objet</h1>
+        </header>
+        
+        <main>
+            <ul class="document-list">
+                <li class="document-item">
+                    <a href="1-intro.pdf" class="document-link">
+                        <strong>Introduction à la POO</strong>
+                        <p>Concepts fondamentaux de la programmation orientée objet</p>
+                    </a>
+                </li>
+                <li class="document-item">
+                    <a href="2-heritage-exception.pdf" class="document-link">
+                        <strong>Héritage et exceptions</strong>
+                        <p>Mécanismes d'héritage et gestion des erreurs</p>
+                    </a>
+                </li>
+                <li class="document-item">
+                    <a href="3-conception_modelisation.pdf" class="document-link">
+                        <strong>Conception et modélisation</strong>
+                        <p>Principes de conception objet avancée</p>
+                    </a>
+                </li>
+                <li class="document-item">
+                    <a href="4-classes_generiques-classes_anonymes.pdf" class="document-link">
+                        <strong>Classes génériques et anonymes</strong>
+                        <p>Utilisation des templates et classes anonymes</p>
+                    </a>
+                </li>
+                <li class="document-item">
+                    <a href="5-design_patterns.pdf" class="document-link">
+                        <strong>Design Patterns</strong>
+                        <p>Modèles de conception objet réutilisables</p>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
