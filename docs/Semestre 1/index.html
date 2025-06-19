@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UE Informatique - Semestre 1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        .ue-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .ue-item {
+            margin-bottom: 1rem;
+        }
+        
+        .ue-link {
+            display: block;
+            padding: 1rem;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            text-decoration: none;
+            color: var(--dark);
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .ue-link:hover {
+            transform: translateX(5px);
+            background-color: #f1f8ff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .ue-name {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UE Informatique - Semestre 1</h1>
+            <p class="subtitle">Cette UE regroupe plusieurs matières de base :</p>
+        </header>
+        
+        <main>
+            <ul class="ue-list">
+                <li class="ue-item">
+                    <a href="UE%20Info/" class="ue-link">
+                        <div class="ue-name">UE Info</div>
+                        <div>Bases de programmation et systèmes</div>
+                    </a>
+                </li>
+                
+                <li class="ue-item">
+                    <a href="UE%20Math/" class="ue-link">
+                        <div class="ue-name">UE Math</div>
+                        <div>Mathématiques fondamentales</div>
+                    </a>
+                </li>
+                
+                <li class="ue-item">
+                    <a href="UE%20Science%20de%20l'ingénieur/" class="ue-link">
+                        <div class="ue-name">UE Science de l'ingénieur</div>
+                        <div>Approche globale du métier d'ingénieur</div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
