@@ -9,18 +9,18 @@
             --primary: #2c3e50;
             --secondary: #3498db;
             --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --gray: #95a5a6;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
             --white: #ffffff;
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
-            --radius: 8px;
-            --transition: all 0.3s ease;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
@@ -31,32 +31,62 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
         
         header {
             text-align: center;
             margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(52, 152, 219, 0.2);
         }
         
         h1 {
             color: var(--primary);
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
             margin-bottom: 1rem;
         }
         
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--gray);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            position: relative;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 1rem auto 0;
+            border-radius: 2px;
         }
         
         .semester-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             margin: 3rem 0;
         }
@@ -69,62 +99,101 @@
             transition: var(--transition);
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .semester-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-md);
+            border-color: rgba(52, 152, 219, 0.2);
+        }
+        
+        .card-header {
+            background: var(--secondary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
         
         .card-content {
             padding: 1.5rem;
-            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .semester-card h3 {
-            color: var(--secondary);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
+            color: var(--primary);
+            margin: 0 0 1rem;
             font-size: 1.5rem;
+            text-align: center;
         }
         
         .semester-card p {
             color: var(--gray);
-            margin-bottom: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
         }
         
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
+        .card-footer {
+            text-align: center;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         footer {
             text-align: center;
-            margin-top: 4rem;
-            padding: 2rem 0;
+            margin-top: 6rem;
+            padding: 3rem 0;
             color: var(--gray);
-            border-top: 1px solid #ddd;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            background: var(--white);
         }
         
-        /* Style pour la page d'erreur personnalisée */
         .error-content {
             text-align: center;
             padding: 2rem;
             background: var(--white);
             border-radius: var(--radius);
             box-shadow: var(--shadow-sm);
-            margin: 2rem 0;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-left: 4px solid var(--accent);
         }
         
         @media (max-width: 768px) {
-            .semester-grid {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 2.2rem;
             }
             
-            h1 {
-                font-size: 2rem;
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -132,94 +201,108 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 FIPA ENSIIE - Ressources pédagogiques</h1>
+            <h1>FIPA ENSIIE</h1>
             <p class="subtitle">
-                Bienvenue sur la plateforme de ressources pédagogiques de la formation FIPA de l'ENSIIE.
-                Vous trouverez ici l'ensemble des supports de cours (CM), travaux dirigés (TD) et travaux pratiques (TP) organisés par semestre.
+                Plateforme centralisée des ressources pédagogiques de la formation FIPA.
+                Accédez aux supports de cours, travaux dirigés et travaux pratiques organisés par semestre.
             </p>
         </header>
         
         <main>
-            <h2>🗂 Semestres disponibles</h2>
+            <h2 class="section-title">Semestres disponibles</h2>
             
             <div class="semester-grid">
                 <a href="Semestre%201/" class="semester-card">
+                    <div class="card-header">S1</div>
                     <div class="card-content">
-                        <div class="card-icon">1️⃣</div>
                         <h3>Semestre 1</h3>
+                        <p>Fondamentaux en informatique, mathématiques et sciences de l'ingénieur</p>
+                        <div class="card-footer">
+                            <span class="btn">Accéder</span>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="Semestre%202/" class="semester-card">
+                    <div class="card-header">S2</div>
                     <div class="card-content">
-                        <div class="card-icon">2️⃣</div>
                         <h3>Semestre 2</h3>
+                        <p>Approfondissement des bases et introduction aux spécialisations</p>
+                        <div class="card-footer">
+                            <span class="btn">Accéder</span>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="Semestre%203/" class="semester-card">
+                    <div class="card-header">S3</div>
                     <div class="card-content">
-                        <div class="card-icon">3️⃣</div>
                         <h3>Semestre 3</h3>
+                        <p>Spécialisation intermédiaire et projets intégrateurs</p>
+                        <div class="card-footer">
+                            <span class="btn">Accéder</span>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="Semestre%204/" class="semester-card">
+                    <div class="card-header">S4</div>
                     <div class="card-content">
-                        <div class="card-icon">4️⃣</div>
                         <h3>Semestre 4</h3>
+                        <p>Domaines avancés et préparation à l'insertion professionnelle</p>
+                        <div class="card-footer">
+                            <span class="btn">Accéder</span>
+                        </div>
                     </div>
                 </a>
                 
                 <a href="Semestre%205/" class="semester-card">
+                    <div class="card-header">S5</div>
                     <div class="card-content">
-                        <div class="card-icon">5️⃣</div>
                         <h3>Semestre 5</h3>
+                        <p>Expertise métier et projet de fin d'études</p>
+                        <div class="card-footer">
+                            <span class="btn">Accéder</span>
+                        </div>
                     </div>
                 </a>
             </div>
 
-            <!-- Section pour afficher une erreur si JavaScript détecte un problème -->
             <div id="error-message" class="error-content" style="display: none;">
                 <h3>⚠️ Problème de navigation détecté</h3>
-                <p>Si vous ne parvenez pas à accéder aux ressources, essayez ces solutions :</p>
-                <ul style="text-align: left; display: inline-block;">
-                    <li>Vérifiez que le nom des dossiers correspond exactement</li>
-                    <li>Assurez-vous que chaque semestre contient un fichier index.html ou index.md</li>
-                    <li>Contactez l'administrateur si le problème persiste</li>
+                <p>Si vous ne parvenez pas à accéder aux ressources :</p>
+                <ul style="text-align: left; max-width: 500px; margin: 1rem auto;">
+                    <li>Vérifiez que les dossiers existent bien sur le serveur</li>
+                    <li>Assurez-vous que chaque semestre contient un fichier index</li>
+                    <li>Contactez l'administration technique si le problème persiste</li>
                 </ul>
             </div>
         </main>
         
         <footer>
-            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+            <p>© 2023 Formation FIPA - ENSIIE</p>
+            <p>Tous droits réservés | <a href="mailto:contact@ensiie.fr" style="color: var(--secondary);">contact@ensiie.fr</a></p>
         </footer>
     </div>
 
     <script>
-        // Vérification que les liens sont valides
         document.addEventListener('DOMContentLoaded', function() {
             const links = document.querySelectorAll('.semester-card');
             let errorDetected = false;
             
             links.forEach(link => {
-                fetch(link.getAttribute('href'))
+                fetch(link.getAttribute('href'), { method: 'HEAD' })
                     .then(response => {
-                        if (!response.ok) {
-                            errorDetected = true;
-                        }
+                        if (!response.ok) errorDetected = true;
                     })
-                    .catch(() => {
-                        errorDetected = true;
-                    });
+                    .catch(() => errorDetected = true);
             });
 
-            // Affiche un message d'erreur si nécessaire
             setTimeout(() => {
                 if (errorDetected) {
                     document.getElementById('error-message').style.display = 'block';
                 }
-            }, 1000);
+            }, 1500);
         });
     </script>
 </body>
