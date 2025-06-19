@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémoire impérative - TP | UE Info | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .document-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .document-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .document-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .document-card p {
+            color: var(--gray);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .card-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../..">Accueil</a> &gt; 
+            <a href="../../..">Semestre 1</a> &gt; 
+            <a href="../..">UE Info</a> &gt; 
+            <a href="..">Mémoire impérative</a> &gt; 
+            Travaux Pratiques
+        </nav>
+        
+        <header>
+            <h1>Travaux Pratiques - Mémoire impérative</h1>
+            <p>Documents disponibles :</p>
+        </header>
+        
+        <main>
+            <div class="documents-grid">
+                <a href="01_TP_Tuto.pdf" class="document-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>TP 1 - Tutoriel</h3>
+                    <p>Introduction à l'environnement de travail</p>
+                </a>
+                
+                <a href="02_TP_Tableaux.pdf" class="document-card">
+                    <div class="card-icon">🧮</div>
+                    <h3>TP 2 - Tableaux</h3>
+                    <p>Manipulation des structures de données</p>
+                </a>
+                
+                <a href="03_TP_Pointeurs.pdf" class="document-card">
+                    <div class="card-icon">📍</div>
+                    <h3>TP 3 - Pointeurs</h3>
+                    <p>Gestion de la mémoire en C</p>
+                </a>
+                
+                <a href="04_TP_Recursivite.pdf" class="document-card">
+                    <div class="card-icon">🌀</div>
+                    <h3>TP 4 - Récursivité</h3>
+                    <p>Algorithmes récursifs</p>
+                </a>
+                
+                <a href="05_TP_Makefile.pdf" class="document-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>TP 5 - Makefile</h3>
+                    <p>Automatisation de compilation</p>
+                </a>
+                
+                <a href="java_tp0_intro.pdf" class="document-card">
+                    <div class="card-icon">☕</div>
+                    <h3>Java TP 0 - Introduction</h3>
+                    <p>Premiers pas en Java</p>
+                </a>
+                
+                <a href="java_tp1.pdf" class="document-card">
+                    <div class="card-icon">☕</div>
+                    <h3>Java TP 1 - Bases</h3>
+                    <p>Programmation orientée objet</p>
+                </a>
+                
+                <a href="java_tp1_bis.pdf" class="document-card">
+                    <div class="card-icon">☕</div>
+                    <h3>Java TP 1 bis</h3>
+                    <p>Approfondissement POO</p>
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
