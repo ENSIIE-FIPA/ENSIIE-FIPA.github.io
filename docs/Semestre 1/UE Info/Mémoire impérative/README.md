@@ -1,7 +1,188 @@
-# Mémoire impérative
-
-Contenus disponibles :
-
-- [Cours magistraux (CM)](CM/)
-- [Travaux dirigés (TD)](TD/)
-- [Travaux pratiques (TP)](TP/)
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémoire impérative | UE Info | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .ressource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .ressource-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .ressource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .ressource-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ressource-card p {
+            color: var(--gray);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .ressource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../">Accueil</a> &gt; 
+            <a href="../../">Semestre 1</a> &gt; 
+            <a href="../">UE Info</a> &gt; 
+            Mémoire impérative
+        </nav>
+        
+        <header>
+            <h1>Mémoire impérative</h1>
+            <p>Contenus disponibles :</p>
+        </header>
+        
+        <main>
+            <div class="ressource-grid">
+                <a href="CM/" class="ressource-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Cours Magistraux (CM)</h3>
+                    <p>Support de cours et présentations</p>
+                </a>
+                
+                <a href="TD/" class="ressource-card">
+                    <div class="card-icon">📝</div>
+                    <h3>Travaux Dirigés (TD)</h3>
+                    <p>Exercices et corrections</p>
+                </a>
+                
+                <a href="TP/" class="ressource-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Travaux Pratiques (TP)</h3>
+                    <p>Sujets et ressources pratiques</p>
+                </a>
+            </div>
+            
+            <h2>Annales d'examens</h2>
+            
+            <div class="ressource-grid">
+                <a href="Examens/" class="ressource-card">
+                    <div class="card-icon">📑</div>
+                    <h3>Examens</h3>
+                    <p>Sujets et corrigés des années précédentes</p>
+                </a>
+                
+                <a href="Partiels/" class="ressource-card">
+                    <div class="card-icon">✍️</div>
+                    <h3>Partiels</h3>
+                    <p>Contrôles intermédiaires</p>
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
