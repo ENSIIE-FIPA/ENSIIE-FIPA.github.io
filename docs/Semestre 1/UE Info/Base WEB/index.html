@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base WEB | UE Info | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .empty-state {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .empty-state-icon {
+            font-size: 3rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../">Accueil</a> &gt; 
+            <a href="../../">Semestre 1</a> &gt; 
+            <a href="../">UE Info</a> &gt; 
+            Base WEB
+        </nav>
+        
+        <div class="empty-state">
+            <div class="empty-state-icon">📭</div>
+            <h1>Base WEB</h1>
+            <p>Cette section est actuellement vide. Le contenu sera ajouté prochainement.</p>
+            <p>Merci de votre compréhension.</p>
+        </div>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
