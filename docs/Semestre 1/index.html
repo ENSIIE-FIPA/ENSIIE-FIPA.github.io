@@ -32,6 +32,21 @@
             padding: 2rem;
         }
         
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
         header {
             margin-bottom: 2rem;
             padding-bottom: 1rem;
@@ -103,6 +118,12 @@
 </head>
 <body>
     <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../">Accueil</a> &gt; 
+            <a href="../">Semestre 1</a> &gt; 
+            UE Informatique
+        </nav>
+        
         <header>
             <h1>UE Informatique - Semestre 1</h1>
             <p class="subtitle">Cette UE regroupe plusieurs matières de base :</p>
