@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM Algèbre | UE Math | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .documents {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .document {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .document:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .document a {
+            text-decoration: none;
+            color: var(--dark);
+            display: block;
+        }
+        
+        .document h3 {
+            color: var(--secondary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .document p {
+            color: var(--gray);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../../">Accueil</a> &gt; 
+            <a href="../../../">Semestre 1</a> &gt; 
+            <a href="../../">UE Math</a> &gt; 
+            <a href="../">Algèbre</a> &gt; 
+            Cours Magistraux
+        </nav>
+        
+        <header>
+            <h1>Cours Magistraux - Algèbre</h1>
+        </header>
+        
+        <main>
+            <div class="documents">
+                <div class="document">
+                    <a href="alge1.pdf">
+                        <h3>Algèbre 1 - Fondamentaux</h3>
+                        <p>Introduction aux concepts de base</p>
+                    </a>
+                </div>
+                
+                <div class="document">
+                    <a href="alge2.pdf">
+                        <h3>Algèbre 2 - Structures algébriques</h3>
+                        <p>Groupes, anneaux et corps</p>
+                    </a>
+                </div>
+                
+                <div class="document">
+                    <a href="alge4.pdf">
+                        <h3>Algèbre 4 - Applications linéaires</h3>
+                        <p>Théorie des applications linéaires</p>
+                    </a>
+                </div>
+                
+                <div class="document">
+                    <a href="cm00.pdf">
+                        <h3>Cours d'introduction</h3>
+                        <p>Présentation générale du module</p>
+                    </a>
+                </div>
+                
+                <div class="document">
+                    <a href="formulaire_algebre.pdf">
+                        <h3>Formulaire d'algèbre</h3>
+                        <p>Résumé des formules importantes</p>
+                    </a>
+                </div>
+                
+                <div class="document">
+                    <a href="formulaire_analyse.pdf">
+                        <h3>Formulaire d'analyse</h3>
+                        <p>Formules utiles en analyse</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>

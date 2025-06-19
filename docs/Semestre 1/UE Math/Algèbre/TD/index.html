@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD Algèbre | UE Math | S1 | FIPA ENSIIE</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --white: #ffffff;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .td-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .td-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .td-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .td-card h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../../../../">Accueil</a> &gt; 
+            <a href="../../../">Semestre 1</a> &gt; 
+            <a href="../../">UE Math</a> &gt; 
+            <a href="../">Algèbre</a> &gt; 
+            Travaux Dirigés
+        </nav>
+        
+        <header>
+            <h1>Travaux Dirigés - Algèbre</h1>
+        </header>
+        
+        <main>
+            <div class="td-grid">
+                <a href="td00-suj.pdf" class="td-card">
+                    <h3>TD 0 - Introduction</h3>
+                    <p>Exercices d'introduction à l'algèbre</p>
+                </a>
+                
+                <a href="td01-suj.pdf" class="td-card">
+                    <h3>TD 1 - Bases</h3>
+                    <p>Exercices fondamentaux</p>
+                </a>
+                
+                <a href="td02-suj.pdf" class="td-card">
+                    <h3>TD 2 - Structures</h3>
+                    <p>Problèmes sur les structures algébriques</p>
+                </a>
+                
+                <a href="td03-suj.pdf" class="td-card">
+                    <h3>TD 3 - Applications</h3>
+                    <p>Exercices sur les applications linéaires</p>
+                </a>
+                
+                <a href="td04-suj.pdf" class="td-card">
+                    <h3>TD 4 - Avancé</h3>
+                    <p>Problèmes complexes</p>
+                </a>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+        </footer>
+    </div>
+</body>
+</html>
