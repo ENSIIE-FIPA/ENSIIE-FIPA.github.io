@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - FIPA ENSIIE</title>
+    <title>Ressources Pédagogiques FIPA - ENSIIE</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -70,7 +70,6 @@
             text-decoration: none;
             color: inherit;
             display: block;
-            position: relative;
         }
         
         .semester-card:hover {
@@ -109,6 +108,16 @@
             border-top: 1px solid #ddd;
         }
         
+        /* Style pour la page d'erreur personnalisée */
+        .error-content {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            margin: 2rem 0;
+        }
+        
         @media (max-width: 768px) {
             .semester-grid {
                 grid-template-columns: 1fr;
@@ -134,40 +143,51 @@
             <h2>🗂 Semestres disponibles</h2>
             
             <div class="semester-grid">
-                <a href="docs/Semestre%201" class="semester-card">
+                <a href="Semestre%201/" class="semester-card">
                     <div class="card-content">
                         <div class="card-icon">1️⃣</div>
                         <h3>Semestre 1</h3>
                     </div>
                 </a>
                 
-                <a href="docs/Semestre%202" class="semester-card">
+                <a href="Semestre%202/" class="semester-card">
                     <div class="card-content">
                         <div class="card-icon">2️⃣</div>
                         <h3>Semestre 2</h3>
                     </div>
                 </a>
                 
-                <a href="docs/Semestre%203" class="semester-card">
+                <a href="Semestre%203/" class="semester-card">
                     <div class="card-content">
                         <div class="card-icon">3️⃣</div>
                         <h3>Semestre 3</h3>
                     </div>
                 </a>
                 
-                <a href="docs/Semestre%204" class="semester-card">
+                <a href="Semestre%204/" class="semester-card">
                     <div class="card-content">
                         <div class="card-icon">4️⃣</div>
                         <h3>Semestre 4</h3>
                     </div>
                 </a>
                 
-                <a href="docs/Semestre%205" class="semester-card">
+                <a href="Semestre%205/" class="semester-card">
                     <div class="card-content">
                         <div class="card-icon">5️⃣</div>
                         <h3>Semestre 5</h3>
                     </div>
                 </a>
+            </div>
+
+            <!-- Section pour afficher une erreur si JavaScript détecte un problème -->
+            <div id="error-message" class="error-content" style="display: none;">
+                <h3>⚠️ Problème de navigation détecté</h3>
+                <p>Si vous ne parvenez pas à accéder aux ressources, essayez ces solutions :</p>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Vérifiez que le nom des dossiers correspond exactement</li>
+                    <li>Assurez-vous que chaque semestre contient un fichier index.html ou index.md</li>
+                    <li>Contactez l'administrateur si le problème persiste</li>
+                </ul>
             </div>
         </main>
         
@@ -175,5 +195,32 @@
             <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
         </footer>
     </div>
+
+    <script>
+        // Vérification que les liens sont valides
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.semester-card');
+            let errorDetected = false;
+            
+            links.forEach(link => {
+                fetch(link.getAttribute('href'))
+                    .then(response => {
+                        if (!response.ok) {
+                            errorDetected = true;
+                        }
+                    })
+                    .catch(() => {
+                        errorDetected = true;
+                    });
+            });
+
+            // Affiche un message d'erreur si nécessaire
+            setTimeout(() => {
+                if (errorDetected) {
+                    document.getElementById('error-message').style.display = 'block';
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
