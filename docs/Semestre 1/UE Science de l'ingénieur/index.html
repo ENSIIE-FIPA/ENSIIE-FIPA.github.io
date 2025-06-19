@@ -47,6 +47,7 @@
             margin-bottom: 2rem;
             padding-bottom: 1rem;
             border-bottom: 2px solid var(--secondary);
+            text-align: center;
         }
         
         h1 {
@@ -58,6 +59,28 @@
         .subtitle {
             font-size: 1.1rem;
             color: var(--gray);
+        }
+        
+        .fun-section {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .fun-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .fun-text {
+            font-style: italic;
+            color: var(--gray);
+            margin: 1rem 0;
         }
         
         .matiere-grid {
@@ -77,15 +100,7 @@
             color: inherit;
             display: block;
             border-left: 4px solid var(--secondary);
-        }
-        
-        .matiere-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        
-        .card-content {
-            padding: 1.5rem;
+            opacity: 0.7;
         }
         
         .matiere-card h3 {
@@ -94,10 +109,9 @@
             margin-bottom: 0.5rem;
         }
         
-        .matiere-card p {
-            color: var(--gray);
-            margin-bottom: 0;
-            font-size: 0.95rem;
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
         }
         
         .card-icon {
@@ -106,14 +120,11 @@
             color: var(--secondary);
         }
         
-        .unavailable {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        .unavailable:hover {
-            transform: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        .ghost-message {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-style: italic;
+            margin-top: 0.5rem;
         }
         
         footer {
@@ -150,47 +161,58 @@
         
         <header>
             <h1>UE Sciences de l'Ingénieur - Semestre 1</h1>
-            <p class="subtitle">Cette UE regroupe les matières transversales du métier d'ingénieur :</p>
+            <p class="subtitle">"La théorie, c'est quand on sait tout mais que rien ne fonctionne. La pratique, c'est quand tout fonctionne mais que personne ne sait pourquoi."</p>
         </header>
         
         <main>
+            <div class="fun-section">
+                <div class="fun-icon">👻</div>
+                <h3>Données Fantômes</h3>
+                <p class="fun-text">"Comme si on avait des données sur ces cours... PTDR"</p>
+                <p>Blague à part, ces matières existent vraiment (en théorie).<br>Mais visiblement, personne n'a encore pris la peine de nous fournir le contenu.</p>
+            </div>
+            
             <div class="matiere-grid">
-                <div class="matiere-card unavailable">
+                <div class="matiere-card">
                     <div class="card-content">
                         <div class="card-icon">🌐</div>
                         <h3>Anglais</h3>
-                        <p>Contenu à venir</p>
+                        <p>To be or not to be... disponible</p>
+                        <p class="ghost-message">Last update: Never</p>
                     </div>
                 </div>
                 
-                <div class="matiere-card unavailable">
+                <div class="matiere-card">
                     <div class="card-content">
                         <div class="card-icon">⚖️</div>
                         <h3>Droit de l'informatique</h3>
-                        <p>Contenu à venir</p>
+                        <p>Juridiquement introuvable</p>
+                        <p class="ghost-message">Error 404: Content not found</p>
                     </div>
                 </div>
                 
-                <div class="matiere-card unavailable">
+                <div class="matiere-card">
                     <div class="card-content">
                         <div class="card-icon">👔</div>
                         <h3>Management des RH</h3>
-                        <p>Contenu à venir</p>
+                        <p>On manage quoi exactement ?</p>
+                        <p class="ghost-message">Disponible dans une autre timeline</p>
                     </div>
                 </div>
                 
-                <div class="matiere-card unavailable">
+                <div class="matiere-card">
                     <div class="card-content">
                         <div class="card-icon">📊</div>
                         <h3>Marketing</h3>
-                        <p>Contenu à venir</p>
+                        <p>Même pas capable de se vendre</p>
+                        <p class="ghost-message">Campagne de com prévue en 3023</p>
                     </div>
                 </div>
             </div>
         </main>
         
         <footer>
-            <p>© 2023 FIPA ENSIIE - Tous droits réservés</p>
+            <p>© 2023 FIPA ENSIIE - Tous droits réservés (en théorie)</p>
         </footer>
     </div>
 </body>
